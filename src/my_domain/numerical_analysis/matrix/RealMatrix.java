@@ -2,7 +2,7 @@ package my_domain.numerical_analysis.matrix;
 
 public class RealMatrix {
     private final int ROWS, COLS;
-    private double a[][];
+    private final double a[][];
 
     public RealMatrix(int n, int m){
         a = new double[n][m];
@@ -24,7 +24,7 @@ public class RealMatrix {
     }
 
     public RealMatrix multiply(RealMatrix mat){
-        if(this.ROWS != mat.ROWS)
+        if(this.COLS != mat.ROWS)
             throw new IllegalArgumentException(
                     String.format(
                             "Dimension mismatch: (%d x %d) x (%d x %d)",
@@ -32,14 +32,14 @@ public class RealMatrix {
                     )
             );
 
-        int n = this.COLS;
-        int m = mat.ROWS;
+        int n = this.ROWS;
+        int m = mat.COLS;
         RealMatrix res = new RealMatrix(n, m);
 
         for(int i = 0; i<n; i++)
-            for(int j = 0; j<m; j++){
-
-            }
+            for(int j = 0; j<m; j++)
+                for(int k = 0; k<this.COLS; k++)
+                res.a[i][j] += this.a[i][k] * mat.a[k][j];
 
         return res;
     }
