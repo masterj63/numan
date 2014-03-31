@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
 
 public class Jacobi {
     public static void main(String[] args) throws FileNotFoundException {
-        double a[][] = MatrixUtils.readMatrix();
+        double a[][] = MatrixUtils.readMatrixAsArray();
         int n = a.length;
 
         for(int i = 0; i<n; i++){

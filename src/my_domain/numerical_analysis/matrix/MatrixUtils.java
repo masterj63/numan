@@ -7,7 +7,7 @@ import static java.lang.Math.*;
 public class MatrixUtils {
     public static final int PRECISION = 8;
 
-    public static double[][] readMatrix() throws FileNotFoundException {
+    public static double[][] readMatrixAsArray() throws FileNotFoundException {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(new FileReader("input.txt"));
 

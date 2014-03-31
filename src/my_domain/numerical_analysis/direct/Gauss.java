@@ -7,7 +7,7 @@ import static java.lang.Math.*;
 
 public class Gauss {
     public static void main(String[] args) throws FileNotFoundException {
-        double a[][] = MatrixUtils.readMatrix();
+        double a[][] = MatrixUtils.readMatrixAsArray();
         int n = a.length;
         for(int i = 0; i<n-1; i++){
             int absMaxInd = i;
