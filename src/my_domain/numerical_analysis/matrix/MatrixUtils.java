@@ -21,6 +21,11 @@ public class MatrixUtils {
         return a;
     }
 
+    public static RealMatrix readRealMatrix() throws FileNotFoundException {
+        double a[][] = readMatrixAsArray();
+        return new RealMatrix(a);
+    }
+
     public static double[][] inverseMatrix(double[][] a){
         a = a.clone();
         int n = a.length;
