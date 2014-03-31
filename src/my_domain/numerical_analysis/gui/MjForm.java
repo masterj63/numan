@@ -14,6 +14,7 @@ public class MjForm {
     private JPanel matrixInputPanel;
 
     private MjForm(){
+        JFrame.setDefaultLookAndFeelDecorated(true);
         frame = new JFrame("title");
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setPreferredSize(new Dimension(700, 400));
@@ -22,10 +23,11 @@ public class MjForm {
         frame.setContentPane(mainPanel);
         matrixInputPanel = new JPanel(new SpringLayout());
         {
-            matrixInputPanel.setPreferredSize(new Dimension(350, 200));
-            matrixInputPanel.setMinimumSize(new Dimension(350, 200));
-            matrixInputPanel.setMaximumSize(new Dimension(350, 200));
-            matrixInputPanel.setSize(new Dimension(350, 200));
+            int tx = 200, ty = 200;
+            matrixInputPanel.setPreferredSize(new Dimension(tx, ty));
+            matrixInputPanel.setMinimumSize(new Dimension(tx, ty));
+            matrixInputPanel.setMaximumSize(new Dimension(tx, ty));
+            matrixInputPanel.setSize(new Dimension(tx, ty));
         }
         frame.setLayout(new FlowLayout());
 
