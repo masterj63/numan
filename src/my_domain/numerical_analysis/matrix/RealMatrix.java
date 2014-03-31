@@ -13,7 +13,7 @@ public class RealMatrix {
     public RealMatrix(double a[][]){
         int n = a.length;
         if(a.length == 0)
-            throw new IllegalArgumentException("An array dimension of 0");
+            throw new IllegalArgumentException("An array of dimension of 0");
         int m = a[0].length;
         for(double t[] : a)
             if(t.length != m)
@@ -22,7 +22,6 @@ public class RealMatrix {
         ROWS = n;
         COLS = m;
     }
-
 
     public RealMatrix multiply(RealMatrix mat){
         if(this.ROWS != mat.ROWS)
