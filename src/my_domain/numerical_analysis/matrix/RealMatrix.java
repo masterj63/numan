@@ -1,7 +1,7 @@
 package my_domain.numerical_analysis.matrix;
 
 public class RealMatrix {
-    private final int ROWS, COLS;
+    public final int ROWS, COLS;
     private final double a[][];
 
     public RealMatrix(int n, int m){
@@ -21,6 +21,10 @@ public class RealMatrix {
         this.a = a.clone();
         ROWS = n;
         COLS = m;
+    }
+
+    public double getA(int i, int j){
+        return a[i][j];
     }
 
     public RealMatrix multiply(RealMatrix mat){
